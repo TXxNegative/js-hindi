@@ -18,3 +18,4 @@ let isloggedin=false
 
 console.log(typeof null)
 console.log(typeof undefined)
+
