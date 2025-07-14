@@ -5,7 +5,7 @@
 // ********** STRINGS ************* //
 // string can be denoted by  both ("",'')
 
-const val=34
+/*const val=34
 const run=90
 
 const name="hope"
@@ -41,11 +41,18 @@ console.log(url.replace("%20","-"))
 
 console.log(url.includes("nigga"));//check if the value is present in the string or not, if not then return false, if present then return true
 
-console.log(gamename.split('-'));//return a  list where elements are the left and right string of the ("-")
+console.log(gamename.split('-'));//return a  list where elements are the left and right string of the ("-")*/
 
+const gamename = new String("TX-nxnegative");
+console.log(gamename.charCodeAt(3));//return the ASCII value of the character at that index
 
+console.log(gamename.concat("good"));
 
+console.log(gamename.endsWith("e"));//check the last character
 
+console.log(gamename.lastIndexOf("n"));//give the last index number where the character is found
+ 
+console.log(gamename.repeat(2));//print the string repeated time,as much times you want
 
-
+console.log(gamename.replace("n",""));
 
