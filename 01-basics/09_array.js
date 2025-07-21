@@ -51,9 +51,9 @@ const useantarr=anotherarr.flat(Infinity)//it will remove all array inside the a
 console.log(anotherarr);
 console.log(useantarr);
 
-console.log(Array.isArray("dick"));
-const dj=Array.from("nigga")
+console.log(Array.isArray("dick"));// for checking the variable is array or not
+const dj=Array.from("nigga")// for store a string in an array by seperate each character
 console.log(Array.from("dick"));
-console.log(Array.from({name:"dick"}))
+console.log(Array.from({name:"dick"}))// it will show an empty array
 
 
