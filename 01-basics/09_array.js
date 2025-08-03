@@ -56,4 +56,8 @@ const dj=Array.from("nigga")// for store a string in an array by seperate each c
 console.log(Array.from("dick"));
 console.log(Array.from({name:"dick"}))// it will show an empty array
 
+let s1=100
+let s2=200
+let s3=300
+console.log(Array.of(s1,s2,s3));
 
