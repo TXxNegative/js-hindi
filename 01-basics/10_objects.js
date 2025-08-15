@@ -19,8 +19,11 @@ const obj2={
     4:"d",
     5:"e"
 }
-const obj3=Object.assign({},obj1,obj2)//use this method to concatanate the two object(a single object have key and value of those two objects)
+//const obj3=Object.assign({},obj1,obj2)//use this method to concatanate the two object(a single object have key and value of those two objects)
+//console.log(obj3);
+const obj3={...obj1,...obj2};
 console.log(obj3);
+
 
 /*const tinderuser=new Object() //defining a object method 2
 
