@@ -39,6 +39,9 @@ const user =[
     }
 ]
 console.log(user[1].email);
+///console.log(Object.keys(tindername));
+///console.log(Object.values(tindername))
+console.log(Object.entries(tindername));
 
 
 /*const tinderuser=new Object() //defining a object method 2
