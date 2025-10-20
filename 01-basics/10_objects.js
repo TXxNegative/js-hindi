@@ -42,6 +42,8 @@ console.log(user[1].email);
 ///console.log(Object.keys(tindername));
 ///console.log(Object.values(tindername))
 console.log(Object.entries(tindername));
+console.log(tindername.hasOwnProperty('isLogged'));
+
 
 
 /*const tinderuser=new Object() //defining a object method 2
