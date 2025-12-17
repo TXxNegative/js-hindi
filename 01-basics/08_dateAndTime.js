@@ -1,15 +1,15 @@
 //date
-/*let  myDate = new Date();
+let  myDate = new Date();
 console.log(myDate.toString()); // Current date and time
 console.log(myDate.toISOString()); // Get the year
 console.log(myDate.toDateString()); // Get the date
 console.log(myDate.getFullYear()); // Get the year
 console.log(myDate.toLocaleString()); // Get the month (0-11)
-console.log( typeof myDate); // Check the type of myDate*/
+console.log( typeof myDate); // Check the type of myDate
 
 
 let mycreatedDate = new Date(2025,0,23);
-/*let myowndate=new Date("05-02-2025");
+let myowndate=new Date("05-02-2025");
 console.log(mycreatedDate.toDateString()); // Specific date
 console.log(mycreatedDate.toLocaleString()); // Get the year of specific date
 console.log(myowndate.toDateString()); // Specific date from string
