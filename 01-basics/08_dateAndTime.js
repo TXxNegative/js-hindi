@@ -1,5 +1,5 @@
 //date
-let  myDate = new Date();
+/*let  myDate = new Date();
 console.log(myDate.toString()); // Current date and time
 console.log(myDate.toISOString()); // Get the year
 console.log(myDate.toDateString()); // Get the date
