@@ -19,7 +19,7 @@ myarray.shift()
 console.log(myarray);
 console.log(myarray.includes(9));//datatype boolean*/
 
-/*const newarr=myarray.join()//conver the array in string form 
+/*const newarr=myarray.join()//convert the array in string form 
 console.log(newarr)
 console.log(myarray);*/
 
