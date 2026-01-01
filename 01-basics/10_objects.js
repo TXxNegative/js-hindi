@@ -54,6 +54,15 @@ tinderuser.isloggedin=false
 
 console.log(tinderuser);*/
 
+const course={
+    coursename:"js in hindi",
+    price:"999",
+    courseinstructor:"hitesh"
+}
+
+const{courseinstructor:instructor}=course // act like (course.courseinstructor), now we can call instructor insted of courseinstructor
+console.log(instructor)
+
 
 //object literals
 
