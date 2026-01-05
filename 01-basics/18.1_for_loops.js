@@ -34,8 +34,26 @@ for (let i = 0; i < arr.length; i++) {
     console.log(index);
 }*/
 
+//WHILE LOOP
+/*let i=0
+while (i<=10) {
+    console.log("yup "+i);
+    i=i+2
+}*/
 
+/*const arr=['flash','batman','superman']
+let i=0
+while(i<arr.length){
+    console.log(`value is ${arr[i]}`);
+    i=i+1
+}
+*/
 
-
-
+// DO WHILE LOOP 
+let score=11 
+do{
+    console.log((`score is ${score}`)); //this will print 11 still if there is range is less than 10 because this loop will run the task first then check the condition
+    score++
+}
+while(score<=10)// will print 11 still if 11>10
 
