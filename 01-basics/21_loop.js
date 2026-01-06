@@ -12,7 +12,7 @@ console.log(newnums);// filter can return values but  need some condition
 
 
 const newnums1=mynums.filter((num) => {
-    num>4 // it will give undefined because we need to use return when we use {}, for further information go through arrow function 
+    num>4 // it will give empty array because we need to use return when we use {}, for further information go through arrow function 
 })
 console.log(newnums1);
 
