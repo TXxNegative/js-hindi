@@ -52,3 +52,4 @@ const shoppingcart=[
 const total=shoppingcart.reduce((acc,item) => acc+item.price,0)
 console.log(total);// assign accumulator value as 0
 
+// DONE WITH BASICS , TIME FOR REAL DEAL
