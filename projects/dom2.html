@@ -7,18 +7,28 @@
 </head>
 <body style="background-color: black; color:antiquewhite">
     <div class="parent">
-        <div class="parent">
-            <div class="day">monday</div>
-            <div class="day">tuesday</div>
-            <div class="day">wednesday</div>
-            <div class="day">thursday</div>
-        </div>
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
     </div>
 </body>
 <script>
-    const d=document.querySelector('.parent')
-    console.log(d);
+    const parent=document.querySelector('.parent')
     console.log(parent.children);
+    
+    ///for (let index = 0; index < parent.children.length; index++) {
+    ///    console.log(parent.children[index].innerHTML);
+    parent.children[1].style.color="orange"
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+    const dayone=document.querySelector('.day')
+    console.log(dayone);
+    console.log(dayone.parentNode);
+    console.log(dayone.parentElement);
+    console.log(dayone.nextElementSibling);
+
+    console.log("nodes :",parent.childNodes);//there are only 4 div caan be seen but while we use childnodes it will also count all enter and all divs also
     
 </script>
 </html>
