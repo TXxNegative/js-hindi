@@ -1,0 +1,33 @@
+.og{
+    background-color: blanchedalmond;
+    color: black;
+    text-align: center;
+    border: black 2px solid;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+#d{
+    height: 500px;
+    border: 2px black solid;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#e{
+    height: 500px;
+    width: 500px;
+    border: 2px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#f{
+    height: 100px;
+    width: 100px;
+    border: 2px black solid;
+    display: flex;
+    align-self: flex-start;
+}

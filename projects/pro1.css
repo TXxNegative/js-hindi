@@ -1,5 +1,36 @@
-#green{
-        background-color: green;
-        border: 1px;
-    }
-
+#pink{
+        background-color: pink;
+}
+#plum{
+    background-color: plum;
+}
+#bisque{
+    background-color:bisque;
+}
+#paleturquoise{
+    background-color: paleturquoise;
+}
+#q{
+    text-align: center;
+    align-self: center;
+}
+#q2{
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin: 10px;
+    height: 150px;
+    width: 1490px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
+}
+.colorbox{
+    border: black 2px solid;
+    background-color: white;
+    text-align: center;
+    margin: 10px;
+    height: 90px;
+    width: 90px;
+}
