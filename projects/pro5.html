@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guess the number</title>
+    <link href="pro5.js" src="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Number guessing game</h1>
+        <p>try ang guess a random number between 1 and 100</p>
+        <p>you have 10 attempt to guess the right number </p>
+        <br>
+        <form>
+            <label for="guessfield" id="guess">guess a number</label>
+            <input type="text" id="guessfield" class="guessfield">
+            <input type="submit" id="sub" value="submit guess" class="guesssubmit">
+        </form>
+        <div class="resultparas">
+            <p>previous guesses:<span class="guesses"></span></p>
+            <p>guesses remaining<span class='lastresult'>10</span></p>
+            <p class="loworhigh"></p>
+        </div>
+    </div>
+    <script src="pro5.js"></script>
+</body>
+</html>
