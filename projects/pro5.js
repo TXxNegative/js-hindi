@@ -40,8 +40,9 @@ function validdataguess(guess){
             endgame()
         }
         else{
-            cleanupguess(guess)
             checkguess(guess)
+            cleanupguess(guess)
+
         }
     }
 }
