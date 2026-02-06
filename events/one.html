@@ -34,17 +34,53 @@
     // type, timestamp,currenttarget,target, toelement,srcelement,currenttarget,clientx,clienty,screenx,screeny,altkey,ctrlkey,shiftkey,keycode (important topics to get learn)
 
     /*(event propagation):
-    1.event bubbling
-    2.event capturing
+    1.event bubbling - from inner to outer div
+    2.event capturing - from outter to inner div
     */
     
-    document.getElementById('images').addEventListener('click',function(e){ 
+    /*document.getElementById('images').addEventListener('click',function(e){ 
         alert('clicked inslide the ul');
     },false) //here false is the event propagation
     
     document.getElementById('showlin').addEventListener('click',function(e){ 
         alert(' showlin clicked');
-    },false)
+    },false) // this is bubbling event
+    */
+
+    /*document.getElementById('images').addEventListener('click',function(e){ 
+        alert('clicked inslide the ul');
+    },true) //here true is the event propagation
     
+    document.getElementById('showlin').addEventListener('click',function(e){ 
+        alert(' showlin clicked');
+    },true) // this is capturing event
+    */
+
+    /*document.getElementById('images').addEventListener('click',function(e){ 
+        alert('clicked inslide the ul');
+    },false) //here false is the event propagation
+    
+    document.getElementById('showlin').addEventListener('click',function(e){ 
+        alert(' showlin clicked');
+        e.stopPropagation() // it is use to stop further bubbling propagation
+    },false) // this is bubbling event
+    */
+
+    /*document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault() //this function is used to stop the website from sending value direct to the server
+        e.stopPropagation()
+        alert('google clicked') //first the page will get allerted then the link will open
+    })*/
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        // let removeit=e.target.parentNode // if we click in any position of the parent div(images) all images will be removed
+        console.log(e.target.tagName);
+        if(e.target.tagName=='IMG'){
+            console.log(e.target.id);
+            let removeit=e.target.parentNode
+            removeit.remove()
+        }
+        //removeit.parentNode.removeChild(removeit) //another method to remove image
+    }) //method to remove a image when click on it
 </script>
-</html>
+</html> 
