@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+    <link href="events_basics.js" rel="stylesheet">
+</head>
+<body style="background-color: black; color: skyblue;">
+    <h2>amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id='showlin' src="3a04461c4095fdee0a989cc1f7da61b1.jpg" alt="showlin"></li>
+            <li><img width="200px" id='claw' src="2f8da1869b821463120286795d0a8554.jpg" alt="claw"></li>
+            <li><img width="200px" id="ghost" src="2b8502d46b4b8991ae6f8196c62d21a5.jpg" alt="ghost"></li>
+            <li><img width="200px" id="wolverine" src="1cbe72edf824842d9ce4c1ebf0804665.jpg" alt="wolverine"></li>
+            <li><img width="200px" id="neimar" src="0b62035f90ece91ef30c814be5b6c307.jpg" alt="neimar"></li>
+            <li><a href="https://www.google.com/" id="google" style="color: skyblue;">google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    //in js most of the events run sequentially but there are some exceptions are there
+
+    /*document.getElementById('showlin').onclick=function(){ //its not a good method
+        alert('showlin clicked')
+    }*/
+
+    //addeventlistner - is currntly hte best method
+    //attachevent() - its aold addeventlistner method
+    //jquery - on -its a old eventlistner method
+
+
+    // type, timestamp,currenttarget,target, toelement,srcelement,currenttarget,clientx,clienty,screenx,screeny,altkey,ctrlkey,shiftkey,keycode (important topics to get learn)
+
+    /*(event propagation):
+    1.event bubbling
+    2.event capturing
+    */
+    
+    document.getElementById('images').addEventListener('click',function(e){ 
+        alert('clicked inslide the ul');
+    },false) //here false is the event propagation
+    
+    document.getElementById('showlin').addEventListener('click',function(e){ 
+        alert(' showlin clicked');
+    },false)
+    
+</script>
+</html>
