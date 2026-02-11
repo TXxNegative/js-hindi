@@ -75,9 +75,12 @@
     document.querySelector('#images').addEventListener('click',function(e){
         // let removeit=e.target.parentNode // if we click in any position of the parent div(images) all images will be removed
         console.log(e.target.tagName);
-        if(e.target.tagName=='IMG'){
+        console.log(e.target.parentNode);
+        
+        if(e.target.tagName==='IMG'){
             console.log(e.target.id);
             let removeit=e.target.parentNode
+            console.log(removeit);
             removeit.remove()
         }
         //removeit.parentNode.removeChild(removeit) //another method to remove image
