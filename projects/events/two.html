@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai and code</h1>
+    <button id="stop">stop</button>
+    <div id="o"></div>
+</body>
+<script>
+    const stop=document.querySelector("#stop");
+    const o=document.querySelector('#o')
+    
+    /* setTimeout(function(){
+    console.log("abhijit");
+    o.innerHTML="abhijit"
+    },2000)*/  // 2000 is milisecond time,setTimeout is a method and also call api, this is not a core java script function,setTimeout it reqires two thing handler(calling function) and timeout,setTimeout wait for a fix timeout then it run for once and then stop.
+
+    const fo=function(){
+        console.log("abhijit");
+    }
+    const changetext=function(){
+        document.querySelector('h1').innerHTML="best js series"
+    }
+
+    const changeme=setTimeout(fo,2000);
+        //here we just define the handler function outside of the setTimeout method and then just call it inside the setTimeout method.
+
+    stop.addEventListener('click',function(e){ //in this event listner if we click on stop within 2000 ms then cleartimeout will stop the running of settimeout . 
+        clearTimeout(changeme)// it is use to stop the settimeout method in between of running if we use cleartimeout,it take settimeout as a parameter 
+        console.log("stopped");
+    })
+
+</script>
+</html>
