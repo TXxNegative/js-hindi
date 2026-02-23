@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch </title>
+</head>
+<style>
+    #para{
+        background-color: aquamarine;
+    }
+    #infobox{
+        background-color: aquamarine;
+        height: 300px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: black solid 2px;
+        border-radius: 10px;
+    }
+    #followers{
+        border: black 2px solid;
+        border-radius: 5px;
+    }
+    #images{
+        padding-bottom: 10px;
+    }
+    #f{
+        padding-bottom: 0px;
+    }
+    #inv{
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+</style>
+<body>
+    <h1>XMLHttp REQUEST(ues before fetch)</h1>
+    <p id="para">The five states are:
+    0 (UNSENT): The XMLHttpRequest client has been created, but the open() method has not been called yet.
+    1 (OPENED): The open() method has been invoked, and the request is set up, but the send() method has not been called. Request headers can be set during this state.
+    2 (HEADERS_RECEIVED): The send() method has been called, and the server has responded with headers and status (e.g., 200 for "OK" or 404 for "Not Found").
+    3 (LOADING): The response body is being received. The responseText property holds partial data while the request is in process.
+    4 (DONE): The fetch operation is complete, and the full response has been received and is ready for use. The data transfer is finished, whether successfully or in failure. 
+    </p>
+    <div id="inv">
+        <div id="infobox">
+            
+            <button id="show">secret</button>
+        </div>
+        
+    </div>
+</body>
+<script>
+    const requesturl='https://api.github.com/users/hiteshchoudhary'//api data stored in this const
+    const xhr=new XMLHttpRequest()// (XMLHttpRequest()) is a class,here we creating a object for using xmlhttpsrequest
+    xhr.open('GET',requesturl)/*send request to api for get data,also known as AJAX request,it requires two parameters method and url string, do upto state 1, but after that state 2,3,4 will done by
+    send().*/
+    console.log(xhr.readyState);// it will give 1 in console
+    xhr.onreadystatechange=function(){// (onreadystatechange)it is a function which will do work according to the change of state  continuously. 
+        console.log(xhr.readyState);// this will print 2,3,4 continuously
+        if(xhr.readyState === 4){
+            console.log(this.responseText);
+            console.log(typeof(this.responseText)) // it will give string, the data we get from url is mostly in form of string.
+            console.log(this.responseText.followers);// this is use for curreent context , inside which function we are currently working . this will return undefine in console because the response we get from the url it is in the form of string mostly not in object.
+            const data=JSON.parse(this.responseText)// use to convert the data type of url from string to JSON. JSON is a data type.
+            
+            console.log(data);//console is not a part of js core, also document is not a part of core js. console.log is a debugger,developer tool for browser. it inject during runtime of js.
+            
+            /*  followers= document.querySelector('#followers') // calling the followers here and approach the follower div give error because we still didnt define the followers div till now */
+            const inv=document.querySelector('#inv')
+            const infobox=document.querySelector('#infobox')
+            inv.addEventListener('click',function(e){
+                infobox.innerHTML=`<div id="images">
+                <img src="https://avatars.githubusercontent.com/u/11613311?v=4" alt="hritesh" height="100">
+                </div>
+                <p id="f"><b>followers:</b>
+                <div id="followers">
+
+                </div>
+                </p>
+                `
+                const followers= document.querySelector('#followers') 
+                followers.innerHTML=data.followers
+            })
+            
+        }
+    }
+    xhr.send();
+    
+</script>
+</html>
