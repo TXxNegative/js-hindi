@@ -146,4 +146,11 @@ getallusers()
 
 
 //USE .THEN() and .CATCH() for previous data fetching
-
+fetch('https://jsonplaceholder.typicode.com/users')// it is a method , it is use to fetching a resource from the network, returning a promise  
+.then((Response)=>{
+    return Response.json()
+})
+.then((data)=>{
+    console.log(data);
+})
+.catch((error)=>{console.log(error);})//Promise .then() runs before setTimeout() Because Microtask queue > Callback queue therefore fetch parat will print before settimeout portion
