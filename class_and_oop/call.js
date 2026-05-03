@@ -6,7 +6,7 @@ function setusername(username){
 
 function createuser(username,email,password){
     //setusername(username)// here we giving referance we are not calling it .
-    setusername.call(this,username)//here the 'this' object here is of function setusername.
+    setusername.call(this,username)//here the 'this' object here is of function setusername. by using .call funtion we  are really calling the function and hold the refference .
 
     this.email=email
     this.password=password
