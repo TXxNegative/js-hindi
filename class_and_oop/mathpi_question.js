@@ -19,14 +19,20 @@ const chai={
 console.log(Object.getOwnPropertyDescriptor(chai,"name"));
 
 Object.defineProperty(chai,'name',{
-    writable:false,
-    enumerable:false
+    //writable:false,
+    enumerable:true //use for itteration of object true means itterable
 })
 
 console.log(Object.getOwnPropertyDescriptor(chai,'name'));
 
-chai.name="abhijit"// dont change the value of name in object chai 
-console.log(chai.name);
+for(let [key, value] of  Object.entries(chai)){
+    if(typeof value !== 'function'){
+        console.log(`${key} : ${value}`);
+        
+    }
+}
+//chai.name="abhijit"// dont change the value of name in object chai 
+//console.log(chai.name);
 
 
 
