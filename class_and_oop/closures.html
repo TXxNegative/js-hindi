@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closures</title>
+</head>
+<body>
+    <p>lexical scope: if there are function inside a function then using lexical scoping method we can give access of variables of the parent function to the child functions. but childrens cant shair their variables and parent also cant access the variable of the children  </p>
+</body>
+    <script>
+        /*
+        function makefun() {
+            var name = "Mozilla"; 
+            function displayName() {
+    
+                console.log(name); 
+            }
+            return displayName(); // here closure will rturn whole lexical scope(function + variable)
+        }
+
+        const myfun = makefun();
+        myfun();
+        */
+        
+        /*
+        function outer(){
+            let username="hitesh"
+
+            function inner(){
+                let secret="my123"
+                //console.log("inner",username);
+            }
+            function innertwo(){
+                console.log("innertwo",username);
+                console.log(secret);
+                
+            }
+            inner()
+            innertwo()
+            //console.log(secret);
+            
+        }
+        outer()
+        console.log("TOO OUTER", username);
+        */
+
+
+    </script>
+</html>
