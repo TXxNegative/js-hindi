@@ -27,8 +27,8 @@
     }*/
 
     //addeventlistner - is currntly hte best method
-    //attachevent() - its aold addeventlistner method
-    //jquery - on -its a old eventlistner method
+    //attachevent() - it is a old addeventlistner method
+    //jquery - on -it is a old eventlistner method
 
 
     // type, timestamp,currenttarget,target, toelement,srcelement,currenttarget,clientx,clienty,screenx,screeny,altkey,ctrlkey,shiftkey,keycode (important topics to get learn)
@@ -38,10 +38,11 @@
     2.event capturing - from outter to inner div
     */
     
-    /*document.getElementById('images').addEventListener('click',function(e){ 
-        alert('clicked inslide the ul');
-    },false) //here false is the event propagation
+    function fog(){alert('clicked inslide the ul');}
+    document.getElementById('images').addEventListener('click',fog,false) //here false is the event propagation
     
+    document.getElementById('images').removeEventListener('click',fog)//to remove a eventlistner
+    /*
     document.getElementById('showlin').addEventListener('click',function(e){ 
         alert(' showlin clicked');
     },false) // this is bubbling event
