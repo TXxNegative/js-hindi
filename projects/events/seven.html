@@ -75,10 +75,10 @@
 <body>
     <div id="main">
         <form action="">
-            <input type="text" placeholder="profile pic">
-            <input type="text" placeholder="name">
-            <input type="text" placeholder="position">
-            <input type="text" placeholder="about">
+            <!-- <input reqired type="text" placeholder="profile pic">  required is used for form validation. if we dont fill any input in input space then it will give us message  -->
+            <input required minlength="3" type="text" placeholder="name">
+            <input required type="text" placeholder="position">
+            <input required type="text" placeholder="about">
             <input type="submit">
         </form>
     </div>
