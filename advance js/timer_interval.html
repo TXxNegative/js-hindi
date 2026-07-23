@@ -9,17 +9,38 @@
     *{
         background-color: #333;
     }
-    #in{
+    
+    #inn{
         background-color: bisque;
         width:100px;
         height: 100px;
         border-radius: 10%;
+        margin-bottom: 20px;
     }
+    #inn.bi{ /* we use #inn.bi because An ID selector (#inn) has higher priority than a class selector (.bi).So even after adding the bi class, the browser still uses: only original backgroungd color of #inn */
+        background-color: aquamarine;
+    }
+    button{
+        margin-left: 4px;
+    }
+    #msg{
+    width: 260px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: lightgreen;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+
 </style>
 <body>
-    <div id="in">
+    <div id="inn">
 
     </div>
+    <button title="on" id="on">start</button>
+    <button title="jio" id="but">stop</button>
+    <button title="alert" id="al">alert</button>
+    <div id="msg">autometicaly disapperar after some time</div>
 </body>
 <script src="timer_interval.js"></script>
 </html>
