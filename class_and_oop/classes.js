@@ -63,4 +63,25 @@ let u2=new User('harshita',"pune","positive","eggh")
 let a1=new Admin("admin","india","addddddmin","a@a")
 */
 
-//prototype inheritance (only in js)
+//prototype inheritance (only in js) object->object
+// eak object hai aap caho to uski sare props or methods ko inherit kra dete ho dusre object mein
+let coffe={
+    color:"dare",
+    drink:function(){
+        console.log("nigga nigga nigga");
+        
+    }
+};
+
+let arabiatacoffe=Object.create(coffe)
+arabiatacoffe.taste="bitter";
+arabiatacoffe.drink()
+console.log(arabiatacoffe);
+
+
+
+
+
+
+
+
